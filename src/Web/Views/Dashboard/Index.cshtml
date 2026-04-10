@@ -1,0 +1,185 @@
+@model Application.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Bảng điều khiển";
+}
+
+<div class="dashboard-container">
+    <!-- ===== KPI SECTION ===== -->
+    <div class="filter-bar" id="filterBar">
+        <div class="filter-left">
+            <h1 class="page-title">
+                <i class="fas fa-chart-line"></i>
+                Bảng điều khiển Bán hàng
+            </h1>
+            <span class="page-subtitle">Tổng quan hiệu suất toàn hệ thống</span>
+        </div>
+        <div class="filter-right">
+            <div class="date-filter shadow-sm" id="globalDashboardFilter">
+                <button class="filter-btn" data-range="7days">7 ngày</button>
+                <button class="filter-btn" data-range="30days">30 ngày</button>
+                <button class="filter-btn" data-range="6months">6 tháng</button>
+                <button class="filter-btn active" data-range="12months">12 tháng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== KPI CARDS ===== -->
+    <div class="kpi-section" id="kpiSection">
+        <!-- ... existing KPI grid code ... -->
+        <div class="kpi-grid">
+            <div class="kpi-card" id="kpiRevenue">
+                <div class="kpi-card-inner">
+                    <div class="kpi-icon revenue"><i class="fas fa-coins"></i></div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Tổng Doanh thu</span>
+                        <span class="kpi-value" id="kpiRevenueValue">@Model.Kpi.FormattedRevenue</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kpi-card" id="kpiOrders">
+                <div class="kpi-card-inner">
+                    <div class="kpi-icon orders"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Tổng Đơn hàng</span>
+                        <span class="kpi-value" id="kpiOrdersValue">@Model.Kpi.TotalOrders.ToString("N0")</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kpi-card" id="kpiConversion">
+                <div class="kpi-card-inner">
+                    <div class="kpi-icon conversion"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Tỷ lệ Chuyển đổi</span>
+                        <span class="kpi-value" id="kpiConversionValue">@Math.Round(Model.Kpi.ConversionRate * 100)%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kpi-card" id="kpiAvgDeal">
+                <div class="kpi-card-inner">
+                    <div class="kpi-icon avgdeal"><i class="fas fa-hand-holding-usd"></i></div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">TB / Đơn hàng</span>
+                        <span class="kpi-value" id="kpiAvgDealValue">@Model.Kpi.FormattedAvgDealSize</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHARTS SECTION ===== -->
+    <div class="charts-section">
+        <!-- Row 1: Revenue Trend & Region Perf -->
+        <div class="charts-row">
+            <div class="chart-card chart-card-lg" id="chartRevenueTrend">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Xu hướng Doanh thu</h3>
+                    </div>
+                    <div class="chart-actions">
+                        <!-- Removed local filter -->
+                    </div>
+                </div>
+                <div class="chart-body">
+                    <div class="chart-loading" id="loadingRevenue"><div class="spinner"></div></div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card chart-card-md" id="chartRegionPerf">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Hiệu suất Khu vực</h3>
+                    </div>
+                    <div class="chart-actions">
+                        <!-- Removed local filter -->
+                    </div>
+                </div>
+                <div class="chart-body">
+                    <div class="chart-loading" id="loadingRegion"><div class="spinner"></div></div>
+                    <canvas id="regionChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Pipeline & Categories -->
+        <div class="charts-row">
+            <div class="chart-card chart-card-md" id="chartPipeline">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Phân bố Pipeline</h3>
+                    </div>
+                </div>
+                <div class="chart-body chart-body-donut">
+                    <div class="chart-loading" id="loadingPipeline"><div class="spinner"></div></div>
+                    <canvas id="pipelineChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card chart-card-lg" id="chartCategories">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Danh mục Bán chạy</h3>
+                    </div>
+                    <div class="chart-actions">
+                        <!-- Removed local filter -->
+                    </div>
+                </div>
+                <div class="chart-body chart-body-donut">
+                    <div class="chart-loading" id="loadingCategories"><div class="spinner"></div></div>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3: Top Products & Data Table -->
+        <div class="charts-row">
+            <div class="chart-card chart-card-lg" id="chartTopProducts">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Sản phẩm Tiêu biểu (Top 5)</h3>
+                    </div>
+                </div>
+                <div class="chart-body">
+                    <div class="chart-loading" id="loadingProducts"><div class="spinner"></div></div>
+                    <canvas id="productChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card chart-card-md" id="dataTableCard">
+                <div class="chart-card-header">
+                    <div class="chart-title-group">
+                        <h3 class="chart-title">Thống kê Chi tiết</h3>
+                    </div>
+                </div>
+                <div class="chart-body table-body">
+                    <div class="table-responsive">
+                        <table class="data-table" id="salesTable">
+                            <thead>
+                                <tr>
+                                    <th>Kỳ</th>
+                                    <th>Doanh thu</th>
+                                    <th>Đơn hàng</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody id="salesTableBody">
+                                <!-- Will be populated by JS for real-time filtering -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Pass server-side data to JavaScript for chart rendering
+        window.dashboardData = {
+            salesTrend: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.SalesTrend)),
+            regionPerformance: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.RegionPerformance)),
+            pipelineDistribution: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.PipelineDistribution))
+        };
+    </script>
+}

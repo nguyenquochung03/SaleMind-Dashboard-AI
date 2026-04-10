@@ -1,0 +1,17 @@
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Infrastructure.deps.json
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Infrastructure.dll
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Infrastructure.pdb
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Application.dll
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Domain.dll
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Application.pdb
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\bin\Release\net9.0\Domain.pdb
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.AssemblyInfo.cs
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastr.15EFFBFE.Up2Date
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.dll
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\refint\Infrastructure.dll
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\Infrastructure.pdb
+C:\Files\Codes\React\SalesMind AI\src\Infrastructure\obj\Release\net9.0\ref\Infrastructure.dll

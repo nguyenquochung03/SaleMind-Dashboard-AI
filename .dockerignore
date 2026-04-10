@@ -1,0 +1,13 @@
+**/.dockerignore
+**/Dockerfile
+**/docker-compose*
+**/.git
+**/.github
+**/.vscode
+**/bin
+**/obj
+**/logs
+**/.DS_Store
+*.user
+*.suo
+*.sln.dotsettings

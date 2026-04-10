@@ -1,0 +1,99 @@
+<!-- ===== AI CHATBOT FLOATING WIDGET ===== -->
+<div id="chatbotWidget" class="chatbot-widget">
+    <!-- Floating Action Button -->
+    <button class="chatbot-fab" id="chatbotFab" title="Mở trợ lý AI">
+        <i class="fas fa-robot fab-icon-open"></i>
+        <i class="fas fa-times fab-icon-close"></i>
+        <span class="fab-pulse"></span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-header-info">
+                    <h3 class="chat-title">Trợ lý AI Bán hàng</h3>
+                    <span class="chat-status" id="chatStatus">
+                        <span class="status-dot online"></span>
+                        Sẵn sàng
+                    </span>
+                </div>
+            </div>
+            <div class="chat-header-actions">
+                <button class="chat-action-btn" id="btnClearChat" title="Xóa lịch sử">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <button class="chat-action-btn" id="btnMinimize" title="Thu nhỏ">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="chat-quick-actions" id="quickActions">
+            <button class="quick-action-btn" data-message="Xem xu hướng doanh thu">
+                <i class="fas fa-chart-line"></i> Xu hướng doanh thu
+            </button>
+            <button class="quick-action-btn" data-message="So sánh hiệu suất các khu vực">
+                <i class="fas fa-globe-asia"></i> So sánh khu vực
+            </button>
+            <button class="quick-action-btn" data-message="Phân bố trạng thái pipeline">
+                <i class="fas fa-chart-pie"></i> Pipeline
+            </button>
+            <button class="quick-action-btn" data-message="Tóm tắt KPI tổng quan">
+                <i class="fas fa-tachometer-alt"></i> Tổng quan KPI
+            </button>
+        </div>
+
+        <!-- Messages Container -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Welcome message -->
+            <div class="chat-message ai-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>👋 Xin chào! Tôi là <strong>trợ lý phân tích dữ liệu bán hàng</strong>.</p>
+                        <p>Bạn có thể hỏi tôi về doanh thu, hiệu suất khu vực, trạng thái đơn hàng, và nhiều hơn nữa!</p>
+                    </div>
+                    <span class="message-time">Bây giờ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <div class="chat-input-wrapper">
+                <input type="text"
+                       class="chat-input"
+                       id="chatInput"
+                       placeholder="Hỏi về dữ liệu bán hàng..."
+                       autocomplete="off"
+                       maxlength="500" />
+                <button class="chat-send-btn" id="btnSendMessage" title="Gửi tin nhắn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Expand Modal -->
+<div class="modal fade" id="chartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content chart-modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chartModalTitle">Biểu đồ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+                <canvas id="chartModalCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

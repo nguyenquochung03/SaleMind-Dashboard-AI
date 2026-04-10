@@ -1,0 +1,503 @@
+2026-04-10 16:00:46.670 +07:00 [INF] Bắt đầu khởi động ứng dụng SalesMind AI...
+2026-04-10 16:00:47.058 +07:00 [INF] User profile is available. Using 'C:\Users\nguye\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-10 16:00:47.157 +07:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5062: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-04-10 16:00:47.166 +07:00 [FTL] Ứng dụng bị dừng đột ngột!
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5062: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in C:\Files\Codes\.Net\SalesMind AI\src\Web\Program.cs:line 54
+2026-04-10 16:06:48.309 +07:00 [INF] Bắt đầu khởi động ứng dụng SalesMind AI...
+2026-04-10 16:06:48.787 +07:00 [INF] User profile is available. Using 'C:\Users\nguye\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-10 16:06:48.913 +07:00 [INF] Now listening on: http://localhost:5062
+2026-04-10 16:06:48.914 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-10 16:06:48.915 +07:00 [INF] Hosting environment: Development
+2026-04-10 16:06:48.915 +07:00 [INF] Content root path: C:\Files\Codes\.Net\SalesMind AI\src\Web
+2026-04-10 16:06:49.125 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/ - null null
+2026-04-10 16:06:49.136 +07:00 [WRN] Failed to determine the https port for redirect.
+2026-04-10 16:06:49.174 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:06:49.196 +07:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.408 +07:00 [INF] Executing ViewResult, running view Index.
+2026-04-10 16:06:49.478 +07:00 [INF] Executed ViewResult - view Index executed in 82.0541ms.
+2026-04-10 16:06:49.482 +07:00 [INF] Executed action Web.Controllers.DashboardController.Index (Web) in 285.0059ms
+2026-04-10 16:06:49.483 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:06:49.487 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/ - 200 null text/html; charset=utf-8 362.8484ms
+2026-04-10 16:06:49.490 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-04-10 16:06:49.490 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - null null
+2026-04-10 16:06:49.494 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.494 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.495 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - null null
+2026-04-10 16:06:49.499 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.500 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - null null
+2026-04-10 16:06:49.500 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=gRJEni6bKKzDxG3T5LqPRXx77Yz789aCQd4LU2Qv5NQ - null null
+2026-04-10 16:06:49.500 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-04-10 16:06:49.500 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.501 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.505 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.505 +07:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\f61f1xnw7n-2tg7b6orzq.gz'
+2026-04-10 16:06:49.505 +07:00 [INF] Sending file. Request path: 'css/chatbot.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\fzq5hie78a-7q9djel9ur.gz'
+2026-04-10 16:06:49.505 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.505 +07:00 [INF] Sending file. Request path: 'css/dashboard.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\ynm9uvqszg-q5qe22q9zt.gz'
+2026-04-10 16:06:49.505 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.506 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.506 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - 200 7015 text/css 15.6656ms
+2026-04-10 16:06:49.506 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - 200 9290 text/css 10.9034ms
+2026-04-10 16:06:49.506 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=gRJEni6bKKzDxG3T5LqPRXx77Yz789aCQd4LU2Qv5NQ - 200 12165 text/css 5.4493ms
+2026-04-10 16:06:49.506 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - null null
+2026-04-10 16:06:49.506 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-10 16:06:49.506 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - null null
+2026-04-10 16:06:49.506 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.507 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.507 +07:00 [INF] Sending file. Request path: 'js/dashboard.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\u0d4ygyflr-vrjs2bqayl.gz'
+2026-04-10 16:06:49.507 +07:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\2wck7lvexw-8luatkg6fp.gz'
+2026-04-10 16:06:49.507 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.507 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 1.1903ms
+2026-04-10 16:06:49.507 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.507 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - 200 18653 text/javascript 1.396ms
+2026-04-10 16:06:49.507 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - 200 1254 text/javascript 1.3915ms
+2026-04-10 16:06:49.509 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - null null
+2026-04-10 16:06:49.510 +07:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\v3uaxdax4h-o1o13a6vjx.gz'
+2026-04-10 16:06:49.510 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\elp8rxzrwi-46ein0sx1k.gz'
+2026-04-10 16:06:49.510 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\yijslo3x3h-493y06b0oq.gz'
+2026-04-10 16:06:49.510 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.510 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.510 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.510 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 10.0542ms
+2026-04-10 16:06:49.510 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 20.4906ms
+2026-04-10 16:06:49.510 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 10.8096ms
+2026-04-10 16:06:49.513 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.515 +07:00 [INF] Sending file. Request path: 'js/chatbot.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\d0r316hf6d-g8hju9i1ma.gz'
+2026-04-10 16:06:49.516 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:06:49.516 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - 200 14354 text/javascript 6.3814ms
+2026-04-10 16:06:49.599 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - null null
+2026-04-10 16:06:49.599 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - null null
+2026-04-10 16:06:49.599 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - null null
+2026-04-10 16:06:49.600 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:06:49.600 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - null null
+2026-04-10 16:06:49.600 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - null null
+2026-04-10 16:06:49.600 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:06:49.600 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:06:49.601 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:06:49.600 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - null null
+2026-04-10 16:06:49.601 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:06:49.601 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetRegionPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegionPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetTopProducts", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTopProducts(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetPipelineDistribution", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPipelineDistribution(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetKpiSummaryData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetKpiSummaryData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetSalesData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSalesData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.608 +07:00 [INF] Route matched with {action = "GetCategoryPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:06:49.635 +07:00 [INF] Executing JsonResult, writing value of type 'Domain.Models.KpiSummary'.
+2026-04-10 16:06:49.638 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:06:49.639 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:06:49.641 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:06:49.641 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:06:49.643 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetPipelineDistribution (Web) in 35.1233ms
+2026-04-10 16:06:49.643 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetSalesData (Web) in 35.0248ms
+2026-04-10 16:06:49.643 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetRegionPerformance (Web) in 35.224ms
+2026-04-10 16:06:49.643 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:06:49.643 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:06:49.643 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetCategoryPerformance (Web) in 34.4996ms
+2026-04-10 16:06:49.643 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:06:49.643 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:06:49.643 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - 200 null application/json; charset=utf-8 44.2431ms
+2026-04-10 16:06:49.643 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - 200 null application/json; charset=utf-8 44.2946ms
+2026-04-10 16:06:49.643 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - 200 null application/json; charset=utf-8 44.2316ms
+2026-04-10 16:06:49.644 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - 200 null application/json; charset=utf-8 43.3303ms
+2026-04-10 16:06:49.644 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:06:49.644 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetKpiSummaryData (Web) in 36.0552ms
+2026-04-10 16:06:49.644 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:06:49.644 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetTopProducts (Web) in 36.3338ms
+2026-04-10 16:06:49.644 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - 200 null application/json; charset=utf-8 44.167ms
+2026-04-10 16:06:49.644 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:06:49.644 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - 200 null application/json; charset=utf-8 44.3679ms
+2026-04-10 16:06:55.700 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=Xem%20xu%20h%C6%B0%E1%BB%9Bng%20doanh%20thu - null null
+2026-04-10 16:06:55.702 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:06:55.712 +07:00 [INF] Route matched with {action = "Stream", controller = "Chat"}. Executing controller action with signature System.Threading.Tasks.Task Stream(System.String, System.Threading.CancellationToken) on controller WebAPI.Controllers.ChatController (Web).
+2026-04-10 16:06:55.727 +07:00 [INF] Registered tool: get_sales_data
+2026-04-10 16:06:55.728 +07:00 [INF] Registered tool: compare_regions
+2026-04-10 16:06:55.728 +07:00 [INF] Registered tool: analyze_pipeline
+2026-04-10 16:06:55.728 +07:00 [INF] Registered tool: calculate_kpi
+2026-04-10 16:06:55.789 +07:00 [INF] Chat [stream]: Xem xu hướng doanh thu
+2026-04-10 16:06:55.793 +07:00 [INF] Processing message: Xem xu hướng doanh thu
+2026-04-10 16:06:55.798 +07:00 [INF] Agent step 1/6
+2026-04-10 16:06:55.818 +07:00 [INF] Fetching free models from OpenRouter API...
+2026-04-10 16:06:55.832 +07:00 [INF] Start processing HTTP request GET https://openrouter.ai/api/v1/models
+2026-04-10 16:06:55.837 +07:00 [INF] Sending HTTP request GET https://openrouter.ai/api/v1/models
+2026-04-10 16:06:56.498 +07:00 [INF] Received HTTP response headers after 651.0423ms - 200
+2026-04-10 16:06:56.502 +07:00 [INF] End processing HTTP request after 676.4176ms - 200
+2026-04-10 16:06:56.960 +07:00 [INF] Found 24 free models on OpenRouter
+2026-04-10 16:06:56.965 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:06:56.966 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:06:57.048 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:06:57.048 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:06:59.444 +07:00 [INF] Received HTTP response headers after 2395.8459ms - 200
+2026-04-10 16:06:59.445 +07:00 [INF] End processing HTTP request after 2396.9443ms - 200
+2026-04-10 16:06:59.471 +07:00 [INF] LLM requested 1 tool(s): get_sales_data
+2026-04-10 16:06:59.480 +07:00 [INF] Executing tool: get_sales_data with args: {"range":"12months"}
+2026-04-10 16:06:59.484 +07:00 [INF] Executing tool: get_sales_data with arguments: {"range":"12months"}
+2026-04-10 16:06:59.510 +07:00 [INF] GetSalesDataTool executing with normalized range: 12months, region: null
+2026-04-10 16:06:59.537 +07:00 [INF] Agent step 2/6
+2026-04-10 16:06:59.538 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:06:59.538 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:06:59.550 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:06:59.551 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:07:00.975 +07:00 [INF] Received HTTP response headers after 1424.2767ms - 200
+2026-04-10 16:07:00.976 +07:00 [INF] End processing HTTP request after 1425.4297ms - 200
+2026-04-10 16:07:03.173 +07:00 [INF] Executed action WebAPI.Controllers.ChatController.Stream (Web) in 7461.136ms
+2026-04-10 16:07:03.174 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:07:03.174 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=Xem%20xu%20h%C6%B0%E1%BB%9Bng%20doanh%20thu - 200 null text/event-stream 7474.4083ms
+2026-04-10 16:08:35.438 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/_framework/clear-browser-cache - null null
+2026-04-10 16:08:35.438 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/_framework/clear-browser-cache - 200 0 null 0.5584ms
+2026-04-10 16:08:35.580 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/ - null null
+2026-04-10 16:08:35.581 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:08:35.581 +07:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.611 +07:00 [INF] Executing ViewResult, running view Index.
+2026-04-10 16:08:35.618 +07:00 [INF] Executed ViewResult - view Index executed in 7.6664ms.
+2026-04-10 16:08:35.618 +07:00 [INF] Executed action Web.Controllers.DashboardController.Index (Web) in 36.7894ms
+2026-04-10 16:08:35.618 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:08:35.619 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/ - 200 null text/html; charset=utf-8 38.2427ms
+2026-04-10 16:08:35.658 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-04-10 16:08:35.660 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.661 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - null null
+2026-04-10 16:08:35.661 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - null null
+2026-04-10 16:08:35.671 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.671 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.674 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\elp8rxzrwi-46ein0sx1k.gz'
+2026-04-10 16:08:35.674 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.674 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 16.1306ms
+2026-04-10 16:08:35.675 +07:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\f61f1xnw7n-2tg7b6orzq.gz'
+2026-04-10 16:08:35.675 +07:00 [INF] Sending file. Request path: 'css/dashboard.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\ynm9uvqszg-q5qe22q9zt.gz'
+2026-04-10 16:08:35.675 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.676 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.676 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - 200 7015 text/css 15.2182ms
+2026-04-10 16:08:35.676 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - 200 9290 text/css 14.8192ms
+2026-04-10 16:08:35.687 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=9LjS02j_0WmiRIPCN4rJqMJpiF4yPcZvYkl5RrjHNTc - null null
+2026-04-10 16:08:35.689 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.690 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - null null
+2026-04-10 16:08:35.691 +07:00 [INF] Sending file. Request path: 'css/chatbot.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\fzq5hie78a-7q9djel9ur.gz'
+2026-04-10 16:08:35.691 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.691 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=9LjS02j_0WmiRIPCN4rJqMJpiF4yPcZvYkl5RrjHNTc - 200 12165 text/css 3.9414ms
+2026-04-10 16:08:35.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-04-10 16:08:35.706 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - null null
+2026-04-10 16:08:35.707 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.711 +07:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\2wck7lvexw-8luatkg6fp.gz'
+2026-04-10 16:08:35.711 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.712 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - 200 1254 text/javascript 5.1923ms
+2026-04-10 16:08:35.716 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.720 +07:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\v3uaxdax4h-o1o13a6vjx.gz'
+2026-04-10 16:08:35.720 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 30.9619ms
+2026-04-10 16:08:35.727 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - null null
+2026-04-10 16:08:35.728 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.730 +07:00 [INF] Sending file. Request path: 'js/dashboard.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\u0d4ygyflr-vrjs2bqayl.gz'
+2026-04-10 16:08:35.730 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.730 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - 200 18653 text/javascript 3ms
+2026-04-10 16:08:35.741 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - null null
+2026-04-10 16:08:35.741 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.745 +07:00 [INF] Sending file. Request path: 'js/chatbot.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\d0r316hf6d-g8hju9i1ma.gz'
+2026-04-10 16:08:35.746 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.746 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - 200 14354 text/javascript 5.0682ms
+2026-04-10 16:08:35.748 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-10 16:08:35.748 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 0.2775ms
+2026-04-10 16:08:35.821 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.825 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\yijslo3x3h-493y06b0oq.gz'
+2026-04-10 16:08:35.825 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:35.825 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 128.5332ms
+2026-04-10 16:08:35.852 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - null null
+2026-04-10 16:08:35.853 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - null null
+2026-04-10 16:08:35.853 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - null null
+2026-04-10 16:08:35.854 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - null null
+2026-04-10 16:08:35.854 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:08:35.854 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:08:35.854 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:08:35.854 +07:00 [INF] Route matched with {action = "GetRegionPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegionPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.854 +07:00 [INF] Route matched with {action = "GetCategoryPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.854 +07:00 [INF] Route matched with {action = "GetPipelineDistribution", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPipelineDistribution(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.855 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - null null
+2026-04-10 16:08:35.855 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - null null
+2026-04-10 16:08:35.855 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:08:35.855 +07:00 [INF] Route matched with {action = "GetKpiSummaryData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetKpiSummaryData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.855 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:08:35.855 +07:00 [INF] Route matched with {action = "GetTopProducts", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTopProducts(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.857 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:08:35.857 +07:00 [INF] Route matched with {action = "GetSalesData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSalesData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:08:35.861 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:08:35.861 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetRegionPerformance (Web) in 6.7755ms
+2026-04-10 16:08:35.861 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:08:35.861 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - 200 null application/json; charset=utf-8 8.5692ms
+2026-04-10 16:08:35.868 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:08:35.870 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:08:35.870 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetSalesData (Web) in 12.7263ms
+2026-04-10 16:08:35.870 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:08:35.872 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:08:35.872 +07:00 [INF] Executing JsonResult, writing value of type 'Domain.Models.KpiSummary'.
+2026-04-10 16:08:35.872 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetPipelineDistribution (Web) in 17.6392ms
+2026-04-10 16:08:35.872 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:08:35.872 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - 200 null application/json; charset=utf-8 19.0638ms
+2026-04-10 16:08:35.872 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetKpiSummaryData (Web) in 17.2484ms
+2026-04-10 16:08:35.873 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:08:35.873 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - 200 null application/json; charset=utf-8 17.8389ms
+2026-04-10 16:08:35.874 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:08:35.875 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetTopProducts (Web) in 19.2029ms
+2026-04-10 16:08:35.875 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:08:35.875 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - 200 null application/json; charset=utf-8 20.1316ms
+2026-04-10 16:08:35.870 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - 200 null application/json; charset=utf-8 17.8468ms
+2026-04-10 16:08:35.878 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetCategoryPerformance (Web) in 23.9201ms
+2026-04-10 16:08:35.879 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:08:35.879 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - 200 null application/json; charset=utf-8 25.2044ms
+2026-04-10 16:08:36.404 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/favicon.ico - null null
+2026-04-10 16:08:36.404 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:36.407 +07:00 [INF] Sending file. Request path: 'favicon.ico'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\ds8f6vp0dx-6wjsjzhz6q.gz'
+2026-04-10 16:08:36.407 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:08:36.408 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/favicon.ico - 200 17422 image/x-icon 3.7364ms
+2026-04-10 16:08:51.201 +07:00 [INF] Application is shutting down...
+2026-04-10 16:09:00.179 +07:00 [INF] Bắt đầu khởi động ứng dụng SalesMind AI...
+2026-04-10 16:09:00.557 +07:00 [INF] User profile is available. Using 'C:\Users\nguye\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-10 16:09:00.666 +07:00 [INF] Now listening on: http://localhost:5062
+2026-04-10 16:09:00.667 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-10 16:09:00.667 +07:00 [INF] Hosting environment: Development
+2026-04-10 16:09:00.667 +07:00 [INF] Content root path: C:\Files\Codes\.Net\SalesMind AI\src\Web
+2026-04-10 16:09:00.894 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/ - null null
+2026-04-10 16:09:00.903 +07:00 [WRN] Failed to determine the https port for redirect.
+2026-04-10 16:09:00.939 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:09:00.961 +07:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.152 +07:00 [INF] Executing ViewResult, running view Index.
+2026-04-10 16:09:01.220 +07:00 [INF] Executed ViewResult - view Index executed in 78.5686ms.
+2026-04-10 16:09:01.223 +07:00 [INF] Executed action Web.Controllers.DashboardController.Index (Web) in 262.1079ms
+2026-04-10 16:09:01.224 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.Index (Web)'
+2026-04-10 16:09:01.227 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/ - 200 null text/html; charset=utf-8 334.6914ms
+2026-04-10 16:09:01.236 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-04-10 16:09:01.236 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - null null
+2026-04-10 16:09:01.239 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.239 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.240 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-04-10 16:09:01.240 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - null null
+2026-04-10 16:09:01.241 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.241 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.242 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - null null
+2026-04-10 16:09:01.243 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=9LjS02j_0WmiRIPCN4rJqMJpiF4yPcZvYkl5RrjHNTc - null null
+2026-04-10 16:09:01.243 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.245 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\yijslo3x3h-493y06b0oq.gz'
+2026-04-10 16:09:01.252 +07:00 [INF] Sending file. Request path: 'css/dashboard.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\ynm9uvqszg-q5qe22q9zt.gz'
+2026-04-10 16:09:01.252 +07:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\v3uaxdax4h-o1o13a6vjx.gz'
+2026-04-10 16:09:01.252 +07:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\f61f1xnw7n-2tg7b6orzq.gz'
+2026-04-10 16:09:01.252 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Sending file. Request path: 'css/chatbot.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\fzq5hie78a-07x0jj0ec2.gz'
+2026-04-10 16:09:01.252 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/chatbot.css?v=9LjS02j_0WmiRIPCN4rJqMJpiF4yPcZvYkl5RrjHNTc - 200 12165 text/css 9.452ms
+2026-04-10 16:09:01.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 12.2415ms
+2026-04-10 16:09:01.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/site.css?v=1lNEpHGbIxwDPSyaw9uE0go_KcCKUQP8SvHOrMQcX_Y - 200 7015 text/css 15.6848ms
+2026-04-10 16:09:01.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/css/dashboard.css?v=7uXR__d97TdjMOocW_rhlsvDw3pbO56Tx2gnj4S2Wf8 - 200 9290 text/css 11.7434ms
+2026-04-10 16:09:01.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 10.1214ms
+2026-04-10 16:09:01.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - null null
+2026-04-10 16:09:01.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - null null
+2026-04-10 16:09:01.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - null null
+2026-04-10 16:09:01.254 +07:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\elp8rxzrwi-46ein0sx1k.gz'
+2026-04-10 16:09:01.254 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-10 16:09:01.254 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 19.2621ms
+2026-04-10 16:09:01.256 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/_framework/aspnetcore-browser-refresh.js - 200 16481 application/javascript; charset=utf-8 1.2613ms
+2026-04-10 16:09:01.257 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.257 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.257 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.258 +07:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\2wck7lvexw-8luatkg6fp.gz'
+2026-04-10 16:09:01.258 +07:00 [INF] Sending file. Request path: 'js/dashboard.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\u0d4ygyflr-vrjs2bqayl.gz'
+2026-04-10 16:09:01.258 +07:00 [INF] Sending file. Request path: 'js/chatbot.js'. Physical path: 'C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\d0r316hf6d-g8hju9i1ma.gz'
+2026-04-10 16:09:01.258 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.258 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.258 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-04-10 16:09:01.258 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/site.js?v=pLnSqlwhFZa0NMtXn-Xdj5HqAXXRGc267ulAePUegyk - 200 1254 text/javascript 4.7358ms
+2026-04-10 16:09:01.258 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/chatbot.js?v=AOD5F6j0T2Fg_566fKzRsZCeLCkXgoQF2_YCdOY4igA - 200 14354 text/javascript 4.6728ms
+2026-04-10 16:09:01.259 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/js/dashboard.js?v=G8G4idO_Z8l0IGVgOgfoFmDQfYoSVvBTy-n9ZSjuit4 - 200 18653 text/javascript 4.6918ms
+2026-04-10 16:09:01.336 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - null null
+2026-04-10 16:09:01.337 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - null null
+2026-04-10 16:09:01.337 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - null null
+2026-04-10 16:09:01.337 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:09:01.337 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:09:01.337 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:09:01.337 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - null null
+2026-04-10 16:09:01.338 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:09:01.339 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - null null
+2026-04-10 16:09:01.338 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - null null
+2026-04-10 16:09:01.340 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:09:01.340 +07:00 [INF] Executing endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetKpiSummaryData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetKpiSummaryData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetCategoryPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetSalesData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSalesData(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetTopProducts", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTopProducts(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetPipelineDistribution", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPipelineDistribution(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.345 +07:00 [INF] Route matched with {action = "GetRegionPerformance", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegionPerformance(System.String) on controller Web.Controllers.DashboardController (Web).
+2026-04-10 16:09:01.367 +07:00 [INF] Executing JsonResult, writing value of type 'Domain.Models.KpiSummary'.
+2026-04-10 16:09:01.367 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:09:01.373 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:09:01.384 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:09:01.385 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:09:01.385 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetSalesData (Web) in 39.8358ms
+2026-04-10 16:09:01.385 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetPipelineDistribution (Web) in 39.7459ms
+2026-04-10 16:09:01.386 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetSalesData (Web)'
+2026-04-10 16:09:01.386 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetCategoryPerformance (Web) in 40.1033ms
+2026-04-10 16:09:01.386 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetPipelineDistribution (Web)'
+2026-04-10 16:09:01.386 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetCategoryPerformance (Web)'
+2026-04-10 16:09:01.385 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetRegionPerformance (Web) in 39.7134ms
+2026-04-10 16:09:01.386 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/categories?range=12months - 200 null application/json; charset=utf-8 48.4657ms
+2026-04-10 16:09:01.386 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/revenue?range=12months - 200 null application/json; charset=utf-8 49.6775ms
+2026-04-10 16:09:01.386 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/pipeline?range=12months - 200 null application/json; charset=utf-8 49.1616ms
+2026-04-10 16:09:01.386 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetRegionPerformance (Web)'
+2026-04-10 16:09:01.386 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/region?range=12months - 200 null application/json; charset=utf-8 49.3119ms
+2026-04-10 16:09:01.387 +07:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.SalesData, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-10 16:09:01.387 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetTopProducts (Web) in 41.2591ms
+2026-04-10 16:09:01.387 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetTopProducts (Web)'
+2026-04-10 16:09:01.387 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/products?range=12months - 200 null application/json; charset=utf-8 48.5262ms
+2026-04-10 16:09:01.390 +07:00 [INF] Executed action Web.Controllers.DashboardController.GetKpiSummaryData (Web) in 44.3925ms
+2026-04-10 16:09:01.390 +07:00 [INF] Executed endpoint 'Web.Controllers.DashboardController.GetKpiSummaryData (Web)'
+2026-04-10 16:09:01.390 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/dashboard/kpi?range=12months - 200 null application/json; charset=utf-8 51.5459ms
+2026-04-10 16:09:08.706 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=Xem%20xu%20h%C6%B0%E1%BB%9Bng%20doanh%20thu - null null
+2026-04-10 16:09:08.706 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:08.715 +07:00 [INF] Route matched with {action = "Stream", controller = "Chat"}. Executing controller action with signature System.Threading.Tasks.Task Stream(System.String, System.Threading.CancellationToken) on controller WebAPI.Controllers.ChatController (Web).
+2026-04-10 16:09:08.734 +07:00 [INF] Registered tool: get_sales_data
+2026-04-10 16:09:08.735 +07:00 [INF] Registered tool: compare_regions
+2026-04-10 16:09:08.735 +07:00 [INF] Registered tool: analyze_pipeline
+2026-04-10 16:09:08.735 +07:00 [INF] Registered tool: calculate_kpi
+2026-04-10 16:09:08.798 +07:00 [INF] Chat [stream]: Xem xu hướng doanh thu
+2026-04-10 16:09:08.803 +07:00 [INF] Processing message: Xem xu hướng doanh thu
+2026-04-10 16:09:08.809 +07:00 [INF] Agent step 1/6
+2026-04-10 16:09:08.823 +07:00 [INF] Fetching free models from OpenRouter API...
+2026-04-10 16:09:08.829 +07:00 [INF] Start processing HTTP request GET https://openrouter.ai/api/v1/models
+2026-04-10 16:09:08.835 +07:00 [INF] Sending HTTP request GET https://openrouter.ai/api/v1/models
+2026-04-10 16:09:09.707 +07:00 [INF] Received HTTP response headers after 867.5645ms - 200
+2026-04-10 16:09:09.712 +07:00 [INF] End processing HTTP request after 885.5703ms - 200
+2026-04-10 16:09:10.003 +07:00 [INF] Found 24 free models on OpenRouter
+2026-04-10 16:09:10.008 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:10.009 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:10.078 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:10.079 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:11.840 +07:00 [INF] Received HTTP response headers after 1761.354ms - 200
+2026-04-10 16:09:11.841 +07:00 [INF] End processing HTTP request after 1762.5933ms - 200
+2026-04-10 16:09:11.857 +07:00 [INF] LLM requested 1 tool(s): get_sales_data
+2026-04-10 16:09:11.862 +07:00 [INF] Executing tool: get_sales_data with args: {"range":"12months"}
+2026-04-10 16:09:11.864 +07:00 [INF] Executing tool: get_sales_data with arguments: {"range":"12months"}
+2026-04-10 16:09:11.878 +07:00 [INF] GetSalesDataTool executing with normalized range: 12months, region: null
+2026-04-10 16:09:11.911 +07:00 [INF] Agent step 2/6
+2026-04-10 16:09:11.912 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:11.912 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:11.928 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:11.928 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:12.914 +07:00 [INF] Received HTTP response headers after 985.1253ms - 200
+2026-04-10 16:09:12.915 +07:00 [INF] End processing HTTP request after 986.6074ms - 200
+2026-04-10 16:09:15.458 +07:00 [INF] Executed action WebAPI.Controllers.ChatController.Stream (Web) in 6743.2017ms
+2026-04-10 16:09:15.459 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:15.459 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=Xem%20xu%20h%C6%B0%E1%BB%9Bng%20doanh%20thu - 200 null text/event-stream 6753.3178ms
+2026-04-10 16:09:26.183 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=KPIs%20hi%E1%BB%87n%20t%E1%BA%A1i%20th%E1%BA%BF%20n%C3%A0o%3F - null null
+2026-04-10 16:09:26.185 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:26.185 +07:00 [INF] Route matched with {action = "Stream", controller = "Chat"}. Executing controller action with signature System.Threading.Tasks.Task Stream(System.String, System.Threading.CancellationToken) on controller WebAPI.Controllers.ChatController (Web).
+2026-04-10 16:09:26.187 +07:00 [INF] Registered tool: get_sales_data
+2026-04-10 16:09:26.188 +07:00 [INF] Registered tool: compare_regions
+2026-04-10 16:09:26.188 +07:00 [INF] Registered tool: analyze_pipeline
+2026-04-10 16:09:26.188 +07:00 [INF] Registered tool: calculate_kpi
+2026-04-10 16:09:26.203 +07:00 [INF] Chat [stream]: KPIs hiện tại thế nào?
+2026-04-10 16:09:26.203 +07:00 [INF] Processing message: KPIs hiện tại thế nào?
+2026-04-10 16:09:26.205 +07:00 [INF] Agent step 1/6
+2026-04-10 16:09:26.205 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:26.206 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:26.211 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:26.212 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:27.405 +07:00 [INF] Received HTTP response headers after 1193.4695ms - 200
+2026-04-10 16:09:27.405 +07:00 [INF] End processing HTTP request after 1194.1181ms - 200
+2026-04-10 16:09:27.408 +07:00 [INF] LLM requested 1 tool(s): calculate_kpi
+2026-04-10 16:09:27.409 +07:00 [INF] Executing tool: calculate_kpi with args: {"include_trends":true}
+2026-04-10 16:09:27.409 +07:00 [INF] Executing tool: calculate_kpi with arguments: {"include_trends":true}
+2026-04-10 16:09:27.413 +07:00 [INF] CalculateKpiTool executing with includeTrends: false
+2026-04-10 16:09:27.429 +07:00 [INF] Agent step 2/6
+2026-04-10 16:09:27.429 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:27.429 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:27.430 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:27.430 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:28.438 +07:00 [INF] Received HTTP response headers after 1008.3992ms - 200
+2026-04-10 16:09:28.439 +07:00 [INF] End processing HTTP request after 1009.2556ms - 200
+2026-04-10 16:09:29.264 +07:00 [INF] Executed action WebAPI.Controllers.ChatController.Stream (Web) in 3078.805ms
+2026-04-10 16:09:29.265 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:29.265 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=KPIs%20hi%E1%BB%87n%20t%E1%BA%A1i%20th%E1%BA%BF%20n%C3%A0o%3F - 200 null text/event-stream 3081.8524ms
+2026-04-10 16:09:39.500 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=So%20s%C3%A1nh%20KPIs%20n%C3%A0y%20v%E1%BB%9Bi%20th%C3%A1ng%20tr%C6%B0%E1%BB%9Bc%3F - null null
+2026-04-10 16:09:39.501 +07:00 [INF] Executing endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:39.501 +07:00 [INF] Route matched with {action = "Stream", controller = "Chat"}. Executing controller action with signature System.Threading.Tasks.Task Stream(System.String, System.Threading.CancellationToken) on controller WebAPI.Controllers.ChatController (Web).
+2026-04-10 16:09:39.511 +07:00 [INF] Registered tool: get_sales_data
+2026-04-10 16:09:39.511 +07:00 [INF] Registered tool: compare_regions
+2026-04-10 16:09:39.511 +07:00 [INF] Registered tool: analyze_pipeline
+2026-04-10 16:09:39.511 +07:00 [INF] Registered tool: calculate_kpi
+2026-04-10 16:09:39.523 +07:00 [INF] Chat [stream]: So sánh KPIs này với tháng trước?
+2026-04-10 16:09:39.523 +07:00 [INF] Processing message: So sánh KPIs này với tháng trước?
+2026-04-10 16:09:39.525 +07:00 [INF] Agent step 1/6
+2026-04-10 16:09:39.525 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:39.526 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:39.527 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:39.527 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:41.131 +07:00 [INF] Received HTTP response headers after 1604.2701ms - 200
+2026-04-10 16:09:41.131 +07:00 [INF] End processing HTTP request after 1604.9465ms - 200
+2026-04-10 16:09:41.133 +07:00 [INF] LLM requested 1 tool(s): calculate_kpi
+2026-04-10 16:09:41.133 +07:00 [INF] Executing tool: calculate_kpi with args: {"include_trends":true}
+2026-04-10 16:09:41.134 +07:00 [INF] Executing tool: calculate_kpi with arguments: {"include_trends":true}
+2026-04-10 16:09:41.134 +07:00 [INF] CalculateKpiTool executing with includeTrends: false
+2026-04-10 16:09:41.142 +07:00 [INF] Agent step 2/6
+2026-04-10 16:09:41.143 +07:00 [INF] Ranked free models prepared. Active cooldowns: 0. Top candidates: qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free
+2026-04-10 16:09:41.143 +07:00 [INF] OpenRouter candidate models (probing sequentially until one succeeds): google/gemini-2.0-flash-001, qwen/qwen3-coder:free, qwen/qwen3-next-80b-a3b-instruct:free, meta-llama/llama-3.2-3b-instruct:free, meta-llama/llama-3.3-70b-instruct:free, nousresearch/hermes-3-llama-3.1-405b:free, google/gemma-3-12b-it:free, google/gemma-3-27b-it:free, google/gemma-3-4b-it:free, google/gemma-3n-e2b-it:free, google/gemma-3n-e4b-it:free, google/gemma-4-26b-a4b-it:free
+2026-04-10 16:09:41.151 +07:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:41.152 +07:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2026-04-10 16:09:42.355 +07:00 [INF] Received HTTP response headers after 1202.6528ms - 200
+2026-04-10 16:09:42.355 +07:00 [INF] End processing HTTP request after 1203.5157ms - 200
+2026-04-10 16:09:43.521 +07:00 [INF] Executed action WebAPI.Controllers.ChatController.Stream (Web) in 4019.9507ms
+2026-04-10 16:09:43.521 +07:00 [INF] Executed endpoint 'WebAPI.Controllers.ChatController.Stream (Web)'
+2026-04-10 16:09:43.522 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5062/api/chat/stream?message=So%20s%C3%A1nh%20KPIs%20n%C3%A0y%20v%E1%BB%9Bi%20th%C3%A1ng%20tr%C6%B0%E1%BB%9Bc%3F - 200 null text/event-stream 4021.4243ms
+2026-04-10 16:10:31.957 +07:00 [INF] Application is shutting down...
