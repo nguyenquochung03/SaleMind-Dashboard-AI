@@ -23,6 +23,27 @@ public static class DependencyInjection
 
         // ===== Cache Services (Redis for External APIs with Memory fallback) =====
         var redisConfig = configuration.GetSection("Redis:Configuration").Value;
+        
+        // Priority: REDIS_URL (Render standard) > REDIS_CONNECTIONSTRING > appsettings.json
+        var redisUrlEnv = Environment.GetEnvironmentVariable("REDIS_URL");
+        var redisConnEnv = Environment.GetEnvironmentVariable("REDIS_CONNECTIONSTRING");
+        
+        if (!string.IsNullOrEmpty(redisUrlEnv))
+        {
+            redisConfig = redisUrlEnv;
+            
+            // Render internal Redis URL often looks like redis://red-xxxxx:6379 
+            // StackExchange.Redis doesn't always like the redis:// prefix depending on version
+            if (redisConfig.StartsWith("redis://", StringComparison.OrdinalIgnoreCase))
+            {
+                redisConfig = redisConfig.Substring(8);
+            }
+        }
+        else if (!string.IsNullOrEmpty(redisConnEnv))
+        {
+            redisConfig = redisConnEnv;
+        }
+
         var useMemoryCache = string.IsNullOrEmpty(redisConfig) || 
                              redisConfig.Contains("REPLACE_WITH_REAL_CONFIG") ||
                              configuration.GetValue<bool>("Redis:UseMemoryCache", false);

@@ -588,3 +588,4 @@ C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\ds8f6vp0dx-
 C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\u0d4ygyflr-vrjs2bqayl.gz
 C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\d0r316hf6d-g8hju9i1ma.gz
 C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\compressed\fzq5hie78a-07x0jj0ec2.gz
+C:\Files\Codes\.Net\SalesMind AI\src\Web\obj\Debug\net9.0\Web.sourcelink.json

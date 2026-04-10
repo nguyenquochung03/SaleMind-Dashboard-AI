@@ -28,3 +28,4 @@ C:\Files\Codes\.Net\SalesMind AI\src\Application\obj\Debug\net9.0\Application.dl
 C:\Files\Codes\.Net\SalesMind AI\src\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Files\Codes\.Net\SalesMind AI\src\Application\obj\Debug\net9.0\Application.pdb
 C:\Files\Codes\.Net\SalesMind AI\src\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Files\Codes\.Net\SalesMind AI\src\Application\obj\Debug\net9.0\Application.sourcelink.json
