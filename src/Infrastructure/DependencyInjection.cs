@@ -22,30 +22,54 @@ public static class DependencyInjection
         services.AddMemoryCache();
 
         // ===== Cache Services (Redis for External APIs with Memory fallback) =====
-        var redisConfig = configuration.GetSection("Redis:Configuration").Value;
+        // Order of precedence:
+        // 1. Environment Variable REDIS_URL (standard format on Render)
+        // 2. Environment Variable REDIS_CONNECTIONSTRING
+        // 3. IConfiguration (includes appsettings.json and optional Redis__Configuration env var)
         
-        // Priority: REDIS_URL (Render standard) > REDIS_CONNECTIONSTRING > appsettings.json
-        var redisUrlEnv = Environment.GetEnvironmentVariable("REDIS_URL");
-        var redisConnEnv = Environment.GetEnvironmentVariable("REDIS_CONNECTIONSTRING");
-        
-        if (!string.IsNullOrEmpty(redisUrlEnv))
+        var redisConfig = configuration["REDIS_URL"] ?? 
+                         configuration["REDIS_CONNECTIONSTRING"] ?? 
+                         configuration["Redis:Configuration"];
+
+        if (!string.IsNullOrEmpty(redisConfig))
         {
-            redisConfig = redisUrlEnv;
-            
-            // Render internal Redis URL often looks like redis://red-xxxxx:6379 
-            // StackExchange.Redis doesn't always like the redis:// prefix depending on version
+            // Robust parsing for URI formats like redis://... or rediss://...
             if (redisConfig.StartsWith("redis://", StringComparison.OrdinalIgnoreCase))
             {
                 redisConfig = redisConfig.Substring(8);
             }
-        }
-        else if (!string.IsNullOrEmpty(redisConnEnv))
-        {
-            redisConfig = redisConnEnv;
+            else if (redisConfig.StartsWith("rediss://", StringComparison.OrdinalIgnoreCase))
+            {
+                redisConfig = redisConfig.Substring(9);
+            }
+
+            // If it contains a '@', it's likely a URL format containing credentials: :password@host:port
+            if (redisConfig.Contains('@') && !redisConfig.Contains('='))
+            {
+                var parts = redisConfig.Split('@');
+                var userInfo = parts[0];
+                var hostInfo = parts[1];
+
+                if (userInfo.Contains(':'))
+                {
+                    var password = userInfo.Split(':').Last();
+                    redisConfig = $"{hostInfo},password={password}";
+                }
+                else
+                {
+                    redisConfig = $"{hostInfo},password={userInfo}";
+                }
+            }
+            
+            // Ensure abortConnect=false so the application doesn't crash if Redis is briefly unavailable
+            if (!redisConfig.Contains("abortConnect=", StringComparison.OrdinalIgnoreCase))
+            {
+                redisConfig = $"{redisConfig},abortConnect=false";
+            }
         }
 
         var useMemoryCache = string.IsNullOrEmpty(redisConfig) || 
-                             redisConfig.Contains("REPLACE_WITH_REAL_CONFIG") ||
+                             redisConfig.Contains("REPLACE_WITH_REAL_CONFIG", StringComparison.OrdinalIgnoreCase) ||
                              configuration.GetValue<bool>("Redis:UseMemoryCache", false);
 
         if (!useMemoryCache)
